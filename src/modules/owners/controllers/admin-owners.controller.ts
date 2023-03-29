@@ -72,7 +72,7 @@ export class AdminOwnerController {
 
   @ApiOperation({ summary: 'Delete A Owner' })
   @Delete('/:id')
-  async remove(@Param('id') id: number) {
+  async remove(@Param('id') id: string) {
     const Owner = await this.ownerService.remove(id);
     return {
       message: 'Owner deleted successfully',

@@ -74,7 +74,7 @@ export class OwnersService {
     return exists;
   }
 
-  async remove(id: number) {
+  async remove(id: string) {
     const exists = await this.ownerModel
       .findOneAndRemove({
         _id: id,
